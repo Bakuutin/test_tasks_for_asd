@@ -1,0 +1,21 @@
+{% load staticfiles i18n %}
+{% load compress %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+        <link rel="shortcut icon" href="{% static 'img/favicon.png' %}"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        {% compress css %}
+            <link type="text/less" rel="stylesheet" href="{% static 'less/main.less' %}"/>
+        {% endcompress %}
+    </head>
+    <body>
+        {% block body %}
+        {% endblock %}
+        {% block scripts %}
+            <script type="text/javascript" src="{% static 'jquery/jquery.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+        {% endblock %}
+    </body>
+</html>

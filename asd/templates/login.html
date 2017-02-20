@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block body %}
+<a href="{% url "social:begin" "google-oauth2" %}">Press here to login via Google</a>
+{% endblock body %}
