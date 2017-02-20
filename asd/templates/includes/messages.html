@@ -1,0 +1,13 @@
+{% for message in messages %}
+    <div role="alert" class="text-center alert alert-dismissible no-radius
+    {% if message.tags == 'info' or message.tags == 'debug' or not message.tags %} alert-info
+    {% elif message.tags == 'success' %} alert-success
+    {% elif message.tags == 'warning' %} alert-warning
+    {% elif message.tags == 'error' %} alert-danger
+    {% else %} {{ message.tags }}
+    {% endif %}
+    ">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{ message|capfirst|linebreaksbr }}
+    </div>
+{% endfor %}

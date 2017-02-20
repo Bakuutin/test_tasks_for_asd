@@ -2,5 +2,14 @@
 {% load staticfiles %}
 
 {% block body %}
-<a href="{% url "social:begin" "google-oauth2" %}">Press here to login via Google</a>
+<div class="container">
+    <div class="jumbotron">
+        <h1>Your must log in to continue</h1>
+        <p>
+            <a class="btn btn-primary btn-lg" href="{% url "social:begin" "google-oauth2" %}" role="button">
+                Press here to login via Google
+            </a>
+        </p>
+    </div>
+</div>
 {% endblock body %}

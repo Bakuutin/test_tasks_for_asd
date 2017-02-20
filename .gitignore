@@ -7,4 +7,5 @@ local.py
 .cache
 node_modules
 cache
+media
 bower_components
